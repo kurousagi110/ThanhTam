@@ -28,10 +28,17 @@ function firstQuestion(){
         background: '#fff url("img/iput-bg.jpg")',
         imageAlt: 'Custom image',
         confirmButtonText: CONFIG.btnIntro
-      }).then(function(){
+    }).then(function(){
+        // Add the audio element
+        var audio = document.createElement("audio");
+        audio.src = "sound/sound.mp3";
+        audio.autoplay = true;
+        document.body.appendChild(audio);
+
         $('.content').show(200);
-      })
+    });
 }
+
 
  // switch button position
  function switchButton() {
